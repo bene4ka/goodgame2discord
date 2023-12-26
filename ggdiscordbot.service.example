@@ -1,0 +1,14 @@
+[Unit]
+Description=Discord GG Streams Notifiaction Bot
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-failure
+StartLimitInterval=30
+StartLimitBurst=2
+
+ExecStart=/usr/local/bin/python3.9 /app/ggdiscordbot.py/ggdiscordbot.py
+[Install]
+WantedBy=multi-user.target
+
